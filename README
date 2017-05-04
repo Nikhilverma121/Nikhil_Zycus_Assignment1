@@ -1,0 +1,31 @@
+TO Create Docker Image from Docker file using the following command:
+
+Step1:docker build -t <imagename> -f <dockerfile> .
+
+When image is created use Docker images command to see all the images;
+
+Step2:docker images
+
+To run docker image as demon use -d and for port binding we have to use -p 
+
+Step3:docker run -d -p 7080:8080 -p 27017:27017 <image name OR image id>
+
+This will run the Tomcat on 7080 on localhost and MongoDB on 27017
+
+step4:docker ps 
+
+This command will give us container id and binding ports if everything is fine
+check http://localhost:7080
+
+If we want to enter in a running container use
+
+step5:docker exec -ti <container Id> /bin/bash
+
+If you want to get info about container 
+
+step6:docker inspect <container Id>
+
+
+
+
+
